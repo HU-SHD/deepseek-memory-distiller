@@ -1,0 +1,11 @@
+# 将此文件路径传给 dsh web --patch ./cordis.patch.yml 即可在本地调试
+- insert:
+    - id: memory-distiller
+      name: './src/index.ts' # 本地开发直接指向 TS 源码
+      config:
+        rawDir: './data/memory/raw/'
+        archiveDir: './data/memory/archive/'
+        distilledDir: './data/memory/distilled/'
+        intervalDays: 3
+        embeddingModel: 'text-embedding-3-small'
+        ragThreshold: 0.6

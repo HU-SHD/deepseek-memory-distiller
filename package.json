@@ -1,0 +1,34 @@
+{
+  "name": "dsh-plugin-memory-distiller",
+  "version": "1.0.0",
+  "description": "基于 DSH 和 Cordis 的大肥鱼的记忆蒸馏插件",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "dsh",
+    "cordis",
+    "plugin",
+    "memory",
+    "rag",
+    "deepseek"
+  ],
+  "author": "YourName",
+  "license": "MIT",
+  "dependencies": {
+    "@deepseek-ai/cordis": "^1.0.0",
+    "@deepseek-ai/schemastery": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dsh": {
+    "bundle": true,
+    "displayName": "记忆蒸馏",
+    "description": "模拟人类记忆机制，定期压缩记忆并支持潜意识检索。在本地和云端的长期对话中节约token消耗量，在此基础上模拟人类的记忆方式实现独属于大肥鱼的记忆方式"
+  }
+}
