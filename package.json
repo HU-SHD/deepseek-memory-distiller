@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-memory-distiller",
-  "version": "1.0.0",
+  "version": "0.2.1",
   "description": "基于 DSH 和 Cordis 的大肥鱼的记忆蒸馏插件",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
