@@ -11,7 +11,7 @@ target/
 *.iws
 *.iml
 *.ipr
-!workspase.xml
+.idea/workspase.xml
 
 ### Eclipse ###
 .apt_generated
