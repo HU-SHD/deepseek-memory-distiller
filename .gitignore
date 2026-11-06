@@ -42,3 +42,9 @@ node_modules/
 dist/
 data/
 *.log
+# v2：依赖 / 构建 / 运行时数据
+node_modules/
+dist/
+data/
+*.log
+.ref/*.log

@@ -1,34 +1,60 @@
 {
   "name": "dsh-plugin-memory-distiller",
-  "version": "0.2.1",
-  "description": "基于 DSH 和 Cordis 的大肥鱼的记忆蒸馏插件",
+  "version": "2.0.0",
+  "description": "潮汐忆体（Tidal Memory Architecture, TMA）：遗忘与记忆分离的双模型长期记忆插件，让 AI 学会遗忘，也让记忆跨年轮累积",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc && node --test \"tests/**/*.test.ts\"",
+    "test:unit": "node --test \"tests/**/*.test.ts\"",
+    "migrate": "tsc && node dist/migrate.js"
   },
   "keywords": [
     "dsh",
     "cordis",
     "plugin",
     "memory",
+    "forgetting",
+    "tma",
+    "tidal-memory",
     "rag",
-    "deepseek"
+    "deepseek",
+    "cyber-life"
   ],
-  "author": "YourName",
+  "author": "stone (HU-SHD)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HU-SHD/deepseek-memory-distiller.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HU-SHD/deepseek-memory-distiller/issues"
+  },
+  "homepage": "https://github.com/HU-SHD/deepseek-memory-distiller#readme",
   "dependencies": {
-    "@deepseek-ai/cordis": "^1.0.0",
-    "@deepseek-ai/schemastery": "^1.0.0"
+    "@deepseek-ai/cordis": "^4.1.0",
+    "@deepseek-ai/schemastery": "~3.19.0",
+    "@deepseek-ai/dsh-commands": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-llm": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-system-prompt": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-tools": "0.2.2-rc.1"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "typescript": "^5.0.0"
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
   },
   "dsh": {
     "bundle": true,
-    "displayName": "记忆蒸馏",
-    "description": "模拟人类记忆机制，定期压缩记忆并支持潜意识检索。在本地和云端的长期对话中节约token消耗量，在此基础上模拟人类的记忆方式实现独属于大肥鱼的记忆方式"
+    "displayName": "潮汐忆体",
+    "description": "遗忘与记忆分离的双模型记忆架构：退潮遗忘、涨潮记忆、年轮继承。让 AI 的记忆不随对话膨胀，也不随模型换代而消失"
   }
 }
